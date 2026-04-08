@@ -1,0 +1,38 @@
+{
+  "name": "connected-server",
+  "version": "1.0.0",
+  "description": "Backend for Connected School App",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "setup-admin": "ts-node src/scripts/setup-admin.ts",
+    "cleanup-users": "ts-node src/scripts/cleanup-users.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/nodemailer": "^7.0.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.3.2",
+    "firebase-admin": "^12.7.0",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.3",
+    "morgan": "^1.10.0",
+    "nodemailer": "^8.0.1",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.6",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
