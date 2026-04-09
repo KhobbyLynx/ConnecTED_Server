@@ -14,7 +14,7 @@ const connectedUsers = new Map<string, Set<string>>(); // userId -> Set of socke
 export const initializeSocket = (httpServer: HttpServer): SocketServer => {
   io = new SocketServer(httpServer, {
     cors: {
-      origin: process.env.LOCALHOST_URL || 'http://localhost:8080',
+      origin: process.env.CLIENT_URL || 'http://localhost:8080',
       methods: ['GET', 'POST'],
       credentials: true,
     },

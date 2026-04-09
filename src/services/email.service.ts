@@ -139,7 +139,7 @@ export const sendEmail = async (options: EmailOptions): Promise<boolean> => {
       return false;
     }
 
-    const { subject, html } = templateFn(...options.templateData);
+    const { subject, html } = (templateFn as any)(...options.templateData);
 
     await transporter.sendMail({
       from: `"Connected" <${process.env.EMAIL_USER}>`,

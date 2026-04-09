@@ -7,8 +7,7 @@ import apiRoutes from './routes'
 const app = express()
 
 const allowedOrigins = [
-	process.env.LOCALHOST_URL,
-	process.env.SERVERHOST_URL
+	process.env.CLIENT_URL,
 ].filter(Boolean) as string[]
 
 // Middleware
